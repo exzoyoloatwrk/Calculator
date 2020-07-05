@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>Calculator</title>
+  <!-- Required meta tags -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="./css/bootstrap.min.css" />
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <div class="container">
+    <div class="row justify-content-center">
+      <div class="calculn ">
+        <form name="calculator" class="caln">
+          <input name="display" class="form-control" id="display" placeholder="0" readonly /><br>
+          <input class="form-group btn btn-outline-dark" type="button" name="bt1" value="1" onclick="cal(bt1.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt2" value="2" onclick="cal(bt2.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt3" value="3" onclick="cal(bt3.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt4" value="4" onclick="cal(bt4.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt5" value="5" onclick="cal(bt5.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt6" value="6" onclick="cal(bt6.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt7" value="7" onclick="cal(bt7.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt8" value="8" onclick="cal(bt8.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt9" value="9" onclick="cal(bt9.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="bt0" value="0" onclick="cal(bt0.value)">
+          <input class="form-group btn btn-outline-dark" type="button" name="btdot" value="."
+            onclick="cal(btdot.value)">
+          <input class="form-group btn btn-danger" type="button" name="btplus" value="+" onclick="cal(btplus.value)">
+          <input class="form-group btn btn-danger" type="button" name="btminus" value="-" onclick="cal(btminus.value)">
+          <input class="form-group btn btn-danger" type="button" name="btsl" value="/" onclick="cal(btsl.value)">
+          <input class="form-group btn btn-danger" type="button" name="btas" value="*" onclick="cal(btas.value)">
+          <input class="form-group btn btn-danger" type="button" name="btper" value="%" onclick="cal(btper.value)">
+
+          <!--Clear Function-->
+          <input class="form-group btn btn-info bt btt" type="button" name="btclear" value="CE" onclick="CE();">
+          <!--Equal button-->
+          <input class="form-group btn btn-success bt btt" type="button" name="btEQL" value="="
+            onclick="display.value=eval(display.value);">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Optional JavaScript -->
+  <script>
+    function cal(c) {
+      calculator.display.value = calculator.display.value + c;
+    }
+
+    function CE() {
+      calculator.display.value = ""
+    }
+  </script>
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="./js/jquery-3.3.1.slim.min.js"></script>
+  <script src="./js/popper.min.js"></script>
+  <script src="./js/bootstrap.min.js"></script>
+</body>
+
+</html>
